@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="top.css">
+</head>
+<script type="text/javascript">
+    function logout()
+    {
+        if(confirm("您确定要注销吗??"))
+        {
+            window.parent.location="<%=request.getContextPath()%>/login.do?method=quit";
+        }
+    }
+</script>
+<body class="top">
+<table >
+    <div class="text">
+    </div>
+    <div class="rigth">
+        <a th:text="'用户'+${user.username}"></a>
+        <a href="#" onclick="logout()">注销</a>
+    </div>
+</table>
+</body>
+</html>

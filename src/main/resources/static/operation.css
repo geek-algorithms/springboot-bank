@@ -1,0 +1,48 @@
+body {
+    background-image: url("images/login/Service.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#service_frame {
+    width: 400px;
+    height: 260px;
+    padding: 13px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+
+    background-color: rgba(240, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#certain {
+    font-size: 14px;
+    font-family: 宋体;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #3BD9FF;
+    border-radius: 15px;
+    border: 0px;
+
+
+}
+
+#submit {
+    padding: 0 28px;
+    border-bottom-right-radius: 20px;
+}

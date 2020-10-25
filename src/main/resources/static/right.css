@@ -1,0 +1,13 @@
+body {
+    background: url(images/login/Service.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#message{
+    width: 800px;
+    height: 260px;
+    padding: 13px;
+    position: absolute;
+    left:40%;
+    top:30%;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>取款</title>
+    <link rel="stylesheet" type="text/css" href="operation.css">
+</head>
+<body>
+<div id="service_frame">
+    <h1>存款</h1>
+    <form action="/withdraws" method="post" id="form">
+        请输入取款金额：<input type="text" name="money" id="money" oninput="value=value.replace(/[^\d]/g,'')"/><br>
+        <div id="submit">
+            <br><br>
+            <input type="submit" id="certain" value="确定"/>
+        </div>
+    </form>
+    <a href="userLeft.html">返回</a>
+</div>
+</body>
+</html>

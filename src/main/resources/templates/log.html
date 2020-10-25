@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>操作明细</title>
+
+    <style type="text/css">
+        #table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        table td, table th {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+
+        table thead th {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+
+        table tr:nth-child(odd) {
+            background: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background: #F5FAFA;
+        }
+
+    </style>
+</head>
+<body>
+<div id="table">
+    <h1>帐户操作日志</h1><a href="userLeft.html">返回</a>
+    <table>
+        <tr>
+            <td ></td>
+            <td >操作</td>
+            <td >金额</td>
+            <td >时间</td>
+        </tr>
+
+        <tr th:each="log:${logList}">
+            <!--            <th scope="row" th:text="${userStat.index + 1}">1</th>-->
+            <!--            <td width="5%" data-th-text="${(tempPage-1)*8+number}"></td>-->
+            <td >10</td>
+            <td th:text="${log.log_type }"></td>
+            <td th:text="${log.log_amount }"></td>
+            <td th:text="${#dates.format(log.log_time, 'yyyy-MM-dd')}"></td>
+        </tr>
+        <!--        <tr>-->
+        <!--            <td	width="20%"><p th:text="'第'+${tempPage}+'页/共'+${session.pageBean.getSumPage()}+'页'"/></td>-->
+        <!--            <td width="5%"><a href="/log.html?tempPage=1">首页</a></td>-->
+
+        <!--            <td width="5%">-->
+        <!--                <li th:if="${tempPage gt 1}">-->
+        <!--                    <a th:href="'/log.html?tempPage='+${tempPage-1 }">上一页</a>-->
+        <!--                </li>-->
+        <!--            </td>-->
+
+        <!--            <td width="5%">-->
+        <!--                <li th:if="${session.pageBean.getSumPage() gt tempPage}">-->
+        <!--                    <a th:href="'/log.html?tempPage='+${tempPage+1 }">下一页</a>-->
+        <!--                </li>-->
+        <!--            </td>-->
+        <!--            <td width="10%"><input type="text" id="pagenum" name="pagenum" size="1" oninput="value=value.replace(/[^\d]/g,'')"/></td>-->
+        <!--            <td width="5%"><input type="button" value="GO" onclick="jump()" /></td>-->
+        <!--        </tr>-->
+    </table>
+</div>
+</body>
+<script type="text/javascript">
+    function jump() {
+        var pagenum = document.getElementById("pagenum").value;
+        window.location.href = "log?tempPage=" + pagenum;
+    }
+</script>
+</html>

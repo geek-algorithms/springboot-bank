@@ -1,0 +1,35 @@
+div {
+    padding:0px;
+    margin:0px;
+}
+
+body {
+    scrollbar-base-color:#bae87c;
+    scrollbar-arrow-color:#FFFFFF;
+    scrollbar-shadow-color:#c1ea8b;
+    padding:0px;
+    margin:auto;
+    text-align:center;
+    background-color:#ffffff;
+    background:url(images/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.bitem {
+    height:26px;
+    line-height:26px;
+    text-align:center;
+    cursor:pointer;
+    background-repeat: no-repeat;
+    margin-top:0px;
+
+}
+.title{
+    margin-left:2px;
+    background:url(images/menubg.gif);
+    background-repeat:no-repeat;
+    text-align:center;
+    cursor:pointer;
+    height:26px;
+    line-height:26px;
+}

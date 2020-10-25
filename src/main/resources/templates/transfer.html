@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>转账</title>
+    <link rel="stylesheet" type="text/css" href="operation.css">
+</head>
+<body>
+<div id="service_frame">
+    <h1>转账</h1>
+    <form action="/transfer" method="post" id="form">
+        <p>目标帐户：<input type="text" name="name" id="name"></p>
+        <p>金额：<input type="text" name="money" id="money" oninput="value=value.replace(/[^\d]/g,'')"/></p>
+        <div id="submit">
+            <br><br>
+            <input type="submit" id="certain" value="确定" onclick="certain()"/>
+        </div>
+    </form>
+    <a href="userLeft.html">返回</a>
+</div>
+</body>
+
+<script type="text/javascript">
+    function certain() {
+        var name = document.getElementById("name").value;
+        if ("" == name) {
+            alert("目标帐户不能为空！");
+            } else {
+                with (document.getElementById("form")) {
+                    submit();
+            }
+        }
+    }
+</script>
+
+</html>

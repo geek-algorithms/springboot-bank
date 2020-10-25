@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>查询余额</title>
+    <link rel="stylesheet" type="text/css" href="operation.css">
+</head>
+<body>
+<div id="service_frame">
+    <h1>当前帐户余额</h1>
+    <p th:text="${message}"/>
+    <p th:text="'帐户余额：'+${session.user.money}"></p>
+    <p th:text="'可用余额：'+${session.user.money}+'￥'"></p>
+    <p th:text="'可取现金：'+${session.user.money}+'￥'"></p>
+    <a href="userLeft.html">返回</a>
+</div>
+
+</body>
+</html>

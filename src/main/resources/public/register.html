@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+<div id="login_frame">
+    <h1>注册</h1>
+
+    <p th:text="'注册失败：'+${msg }" style="color: red; font-weight: 900"></p>
+
+    <form action="/register" method="post" id="form">
+        <p><label class="label_input"> 帐户：</label>
+            <input type="text" class="text_field" name="username"/><br></p>
+        <p><label class="label_input"> 密码：</label>
+            <input type="password" class="text_field" name="password"/><br></p>
+
+        <div id="login_control">
+            <input type="submit" id="btn_login" value="注册" onclick="regist()"/>
+        </div>
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    function regist(){
+        var name=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        if(name==""){
+            alert("用户名不能为空");
+        }else if(""==password){
+            alert("密码不能为空");
+        }else{
+            with(document.getElementById("form")){
+                submit();
+            }
+        }
+    }
+</script>
+</html>
